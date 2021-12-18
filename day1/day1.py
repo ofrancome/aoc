@@ -1,4 +1,4 @@
-import sys
+from utils.utils import readfile
 
 
 def increases(given_measures, offset):
@@ -10,10 +10,8 @@ def increases(given_measures, offset):
     return count
 
 
-print(sys.argv)
-with open("input.txt") as f:
-# with open("sample.txt") as f:
-    lines = f.read().splitlines()
+# lines = readfile("sample.txt")
+lines = readfile("input.txt")
 
 measures = [int(depth) for depth in lines]
 
